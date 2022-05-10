@@ -11,7 +11,7 @@ let a :any
 a = 123
 a = '123'
 
-//3️⃣ unknown type : 모듬 자료형 허용, any보다 안전함
+//3️⃣ unknown type : 모든 자료형 허용, any보다 안전함
 let b :unknown
 b = 123
 b = {}
@@ -35,7 +35,7 @@ let old :undefined|number = undefined
 let married :boolean = false
 let me :(string|undefined|number|boolean)[]= [who, old, married]
 
-//Q2. school이라는 변수에 타입 지정하기
+//Q2. school이라는 오브젝트에 타입 지정하기
 let school : {
   score : (number|boolean)[],
   teacher : string,
