@@ -7,7 +7,7 @@ var obj = { a: '123' };
 var a;
 a = 123;
 a = '123';
-//3️⃣ unknown type : 모듬 자료형 허용, any보다 안전함
+//3️⃣ unknown type : 모든 자료형 허용, any보다 안전함
 var b;
 b = 123;
 b = {};
@@ -25,7 +25,7 @@ var who = 'kim';
 var old = undefined;
 var married = false;
 var me = [who, old, married];
-//Q2. school이라는 변수에 타입 지정하기
+//Q2. school이라는 오브젝트에 타입 지정하기
 var school = {
     score: [100, 97, 84],
     teacher: 'Grace',
