@@ -36,7 +36,7 @@ let hi: string = 'kim'
 
 ///2. 무슨 타입이 들어올지 확실할 때만 -> 그 타입으로 덮어버리는 것이기 때문(버그 추척 못함) ⭐️디버깅용, 비상용(남의 코드 고칠 때, 알 수 없는 타입에러날 때 )
 
-//숙제1
+//숙제 1 클리닝함수 만들기
 
 let dirtyArr: (string|number)[] = [1,'2',3]
 function cleanArr(arr: (string|number)[]) {
@@ -53,6 +53,22 @@ function cleanArr(arr: (string|number)[]) {
 
 console.log(cleanArr(dirtyArr))
 
+//숙제2
+let 민지쌤 = { subject: 'math'}
+let 하영쌤 = { subject: ['science', 'english'] }
+let 연우쌤 = { subject: ['science', 'art', 'korean'] }
 
 
+const subjectFunc = (x: { subject : string | string[] })=>{
+  if(typeof x.subject === 'string' ){
+    return x.subject
+  }else if(Array.isArray(x.subject)){
+    return x.subject[x.subject.length-1]
+  }else{
+    return 'typeError'
+  }
+}
 
+console.log(subjectFunc(민지쌤))//math
+console.log(subjectFunc(하영쌤))//english
+console.log(subjectFunc(연우쌤))//korean
